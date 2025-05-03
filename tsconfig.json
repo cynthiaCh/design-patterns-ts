@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                      // 支持更现代的 JS 特性
+    "module": "ESNext",                      // 使用现代模块系统
+    "moduleResolution": "Node",              // 适合 Node 方式导入
+    "outDir": "./dist",                      // 输出目录
+    "rootDir": "./src",                      // 源码目录
+    "esModuleInterop": true,                 // 允许导入 CommonJS 模块
+    "forceConsistentCasingInFileNames": true, // 区分文件大小写
+    "strict": true,                          // 开启严格模式（推荐）
+    "skipLibCheck": true                     // 跳过第三方声明文件检查
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

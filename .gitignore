@@ -1,0 +1,31 @@
+# Node
+node_modules/
+dist/
+.env
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+vitest-*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Mac
+.DS_Store
+
+# Test snapshots
+__snapshots__/
+coverage/
+
+# Cache
+.cache/
+turbo/
