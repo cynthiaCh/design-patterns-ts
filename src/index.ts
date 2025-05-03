@@ -3,6 +3,7 @@ import { ConcreteCreatorA } from './creational/factory-method/ConcreteCreatorA.j
 import { ConcreteCreatorB } from './creational/factory-method/ConcreteCreatorB.js'
 import { ChinaFruitFactory } from './creational/abstract-factory/ChinaFruitFactory.js'
 import { USFruitFactory } from './creational/abstract-factory/USFruitFactory.js'
+import { ConcreteUserProfileBuilder } from './creational/builder/ConcreteUserProfileBuilder.js'
 
 console.log('=== Singleton 测试 ===')
 const a = Singleton.getInstance()
@@ -23,3 +24,13 @@ console.log(chinaFactory.createBanana().eat())  // 吃的是中国香蕉
 const usFactory = new USFruitFactory()
 console.log(usFactory.createApple().eat())      // 吃的是美国苹果
 console.log(usFactory.createBanana().eat())     // 吃的是美国香蕉
+
+console.log('\n=== builder 测试 ===')
+const builder = new ConcreteUserProfileBuilder()
+const userProfile = builder
+  .setBio('前端工程师，喜欢喝咖啡和构建DSL系统')
+  .addInterest('设计模式')
+  .addInterest('Vue3 + TypeScript')
+  .setSocial('', 'https://github.com/cynthiaCh')
+  .build()
+console.log(userProfile.toString())
