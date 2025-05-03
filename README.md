@@ -62,4 +62,35 @@ design-patterns-ts/
 - [✅] 工厂方法模式（Factory Method）
 - [✅] 抽象工厂模式（Abstract Factory）
 - [✅] 建造者模式（Builder）
-- [ ] 原型模式（Prototype）
+- [✅] 原型模式（Prototype）
+
+### 🧱 结构型模式（Structural Patterns）
+
+- [ ] 适配器模式（Adapter）
+- [ ] 装饰器模式（Decorator）
+- [ ] 外观模式（Facade）
+- [ ] 组合模式（Composite）
+- [ ] 代理模式（Proxy）
+- [ ] 桥接模式（Bridge）
+- [ ] 享元模式（Flyweight）
+
+### 🔄 行为型模式（Behavioral Patterns）
+
+- [ ] 策略模式（Strategy）
+- [ ] 观察者模式（Observer）
+- [ ] 状态模式（State）
+- [ ] 命令模式（Command）
+- [ ] 责任链模式（Chain of Responsibility）
+- [ ] 模板方法模式（Template Method）
+- [ ] 迭代器模式（Iterator）
+- [ ] 中介者模式（Mediator）
+- [ ] 访问者模式（Visitor）
+- [ ] 解释器模式（Interpreter）
+- [ ] 备忘录模式（Memento）
+
+📌 每个模式包含以下内容：
+
+- ✅ TypeScript 实现（`src/`）
+- ✅ 使用示例（`src/index.ts` / 单测）
+- ✅ Mermaid 类图（`UML-PNG/`）
+- ✅ 中文注释 + 可视化场景解说
