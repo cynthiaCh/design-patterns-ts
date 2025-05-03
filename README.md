@@ -33,10 +33,9 @@ node dist/index.js
 
 > 📌 若你使用 ESModule，请在 `package.json` 中添加 `"type": "module"`，并确保 `import` 路径带 `.js` 后缀。
 
-### 开发中调试（可选）
-
+### 开发中调试
 ```bash
-npx ts-node src/index.ts
+node --loader ts-node/esm src/index.ts
 ```
 
 
