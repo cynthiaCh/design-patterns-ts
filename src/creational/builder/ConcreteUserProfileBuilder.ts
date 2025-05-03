@@ -1,35 +1,35 @@
 // src/creational/builder/ConcreteUserProfileBuilder.ts
-import { UserProfile } from './UserProfile.js'
-import type { UserProfileBuilder } from './UserProfileBuilder.js'
+import { UserProfile } from './UserProfile.js';
+import type { UserProfileBuilder } from './UserProfileBuilder.js';
 
 export class ConcreteUserProfileBuilder implements UserProfileBuilder {
-  private profile: UserProfile
+  private profile: UserProfile;
 
   constructor() {
-    this.profile = new UserProfile()
+    this.profile = new UserProfile();
   }
 
   setAvatar(url: string) {
-    this.profile.avatarUrl = url
-    return this
+    this.profile.avatarUrl = url;
+    return this;
   }
 
   setBio(bio: string) {
-    this.profile.bio = bio
-    return this
+    this.profile.bio = bio;
+    return this;
   }
 
   addInterest(interest: string) {
-    this.profile.interests.push(interest)
-    return this
+    this.profile.interests.push(interest);
+    return this;
   }
 
   setSocial(twitter?: string, github?: string) {
-    this.profile.social = { twitter, github }
-    return this
+    this.profile.social = { twitter, github };
+    return this;
   }
 
   build() {
-    return this.profile
+    return this.profile;
   }
 }
