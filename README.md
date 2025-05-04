@@ -132,3 +132,11 @@ design-patterns-ts/
     目的：将一个类的接口转换为客户端期望的另一个接口，实现兼容。
 
     示例：OldCharger 使用 ChargerAdapter 适配为 Charger 接口。
+
+🧁 Decorator 装饰器模式
+
+    目的：在不改变原始类的前提下，动态添加额外功能。
+
+    使用场景：增强功能、添加可选项（如咖啡加糖加奶）。
+
+    示例：Coffee 被逐层包装为 MilkDecorator 和 SugarDecorator。

@@ -1,12 +1,20 @@
 import { Singleton } from './creational/singleton.js';
+
 import { ConcreteCreatorA } from './creational/factory-method/ConcreteCreatorA.js';
 import { ConcreteCreatorB } from './creational/factory-method/ConcreteCreatorB.js';
+
 import { ChinaFruitFactory } from './creational/abstract-factory/ChinaFruitFactory.js';
 import { USFruitFactory } from './creational/abstract-factory/USFruitFactory.js';
+
 import { ConcreteUserProfileBuilder } from './creational/builder/ConcreteUserProfileBuilder.js';
 import { Field } from './creational/prototype/Field.js';
+
 import { OldCharger } from './structural/adapter/Adaptee.js';
 import { ChargerAdapter } from './structural/adapter/Adapter.js';
+
+import { Coffee } from './structural/decorator/Coffee.js';
+import { MilkDecorator } from './structural/decorator/MilkDecorator.js';
+import { SugarDecorator } from './structural/decorator/SugarDecorator.js';
 
 console.log('=== Singleton 测试 ===');
 const a = Singleton.getInstance();
@@ -50,3 +58,10 @@ console.log('\n=== Adapter 测试 ===');
 const oldCharger = new OldCharger();
 const adapter = new ChargerAdapter(oldCharger);
 adapter.chargeWithUSB();
+
+console.log('\n=== Decorator 装饰器模式测试 ===');
+let beverage = new Coffee(); // 原始咖啡
+beverage = new MilkDecorator(beverage); // 加牛奶
+beverage = new SugarDecorator(beverage); // 加糖
+console.log('描述：', beverage.getDescription()); // Coffee + Milk + Sugar
+console.log('总价：', beverage.cost()); // 5 + 2 + 1 = 8
