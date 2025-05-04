@@ -67,8 +67,8 @@ design-patterns-ts/
 ### 🧱 结构型模式（Structural Patterns）
 
 - [✅] 适配器模式（Adapter）
-- [ ] 装饰器模式（Decorator）
-- [ ] 外观模式（Facade）
+- [✅] 装饰器模式（Decorator）
+- [✅] 外观模式（Facade）
 - [ ] 组合模式（Composite）
 - [ ] 代理模式（Proxy）
 - [ ] 桥接模式（Bridge）
@@ -140,3 +140,9 @@ design-patterns-ts/
     使用场景：增强功能、添加可选项（如咖啡加糖加奶）。
 
     示例：Coffee 被逐层包装为 MilkDecorator 和 SugarDecorator。
+
+📸 Facade 外观模式
+
+- **目的**：为多个复杂子系统提供一个统一的简化接口。
+- **使用场景**：客户端只想“一键完成复杂任务”时，如拍照、下单、视频播放等。
+- **示例**：`Phone.takePhoto()` 封装了 `Sensor`, `Camera`, `Storage` 的细节。

@@ -16,6 +16,8 @@ import { Coffee } from './structural/decorator/Coffee.js';
 import { MilkDecorator } from './structural/decorator/MilkDecorator.js';
 import { SugarDecorator } from './structural/decorator/SugarDecorator.js';
 
+import { Phone } from './structural/facade/Phone.js';
+
 console.log('=== Singleton 测试 ===');
 const a = Singleton.getInstance();
 const b = Singleton.getInstance();
@@ -65,3 +67,8 @@ beverage = new MilkDecorator(beverage); // 加牛奶
 beverage = new SugarDecorator(beverage); // 加糖
 console.log('描述：', beverage.getDescription()); // Coffee + Milk + Sugar
 console.log('总价：', beverage.cost()); // 5 + 2 + 1 = 8
+
+console.log('\n=== Facade 外观模式测试 ===');
+const myPhone = new Phone();
+myPhone.takePhoto();
+
