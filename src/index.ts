@@ -18,6 +18,9 @@ import { SugarDecorator } from './structural/decorator/SugarDecorator.js';
 
 import { Phone } from './structural/facade/Phone.js';
 
+import { File } from './structural/composite/File.js';
+import { Folder } from './structural/composite/Folder.js';
+
 console.log('=== Singleton 测试 ===');
 const a = Singleton.getInstance();
 const b = Singleton.getInstance();
@@ -71,4 +74,16 @@ console.log('总价：', beverage.cost()); // 5 + 2 + 1 = 8
 console.log('\n=== Facade 外观模式测试 ===');
 const myPhone = new Phone();
 myPhone.takePhoto();
+
+console.log('\n=== Composite 组合模式测试 ===');
+const file1 = new File('readme.md');
+const file2 = new File('design-patterns.ts');
+const file3 = new File('LICENSE');
+const src = new Folder('src');
+src.add(file2);
+const root = new Folder('project-root');
+root.add(file1);
+root.add(src);
+root.add(file3);
+root.show();
 
