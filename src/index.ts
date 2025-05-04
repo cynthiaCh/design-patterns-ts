@@ -5,6 +5,8 @@ import { ChinaFruitFactory } from './creational/abstract-factory/ChinaFruitFacto
 import { USFruitFactory } from './creational/abstract-factory/USFruitFactory.js';
 import { ConcreteUserProfileBuilder } from './creational/builder/ConcreteUserProfileBuilder.js';
 import { Field } from './creational/prototype/Field.js';
+import { OldCharger } from './structural/adapter/Adaptee.js';
+import { ChargerAdapter } from './structural/adapter/Adapter.js';
 
 console.log('=== Singleton 测试 ===');
 const a = Singleton.getInstance();
@@ -43,3 +45,8 @@ clone.label = '昵称';
 clone.tooltip = '请填写你的昵称';
 console.log('原型：', original.toString());
 console.log('克隆：', clone.toString());
+
+console.log('\n=== Adapter 测试 ===');
+const oldCharger = new OldCharger();
+const adapter = new ChargerAdapter(oldCharger);
+adapter.chargeWithUSB();

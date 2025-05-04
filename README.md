@@ -66,7 +66,7 @@ design-patterns-ts/
 
 ### 🧱 结构型模式（Structural Patterns）
 
-- [ ] 适配器模式（Adapter）
+- [✅] 适配器模式（Adapter）
 - [ ] 装饰器模式（Decorator）
 - [ ] 外观模式（Facade）
 - [ ] 组合模式（Composite）
@@ -94,3 +94,41 @@ design-patterns-ts/
 - ✅ 使用示例（`src/index.ts` / 单测）
 - ✅ Mermaid 类图（`UML-PNG/`）
 - ✅ 中文注释 + 可视化场景解说
+
+
+## 🧱 设计模式一览
+🟩 Singleton 单例模式
+
+    目的：确保一个类只有一个实例，并提供全局访问点。
+
+    示例：Singleton.getInstance() 始终返回相同对象。
+
+🟩 Factory Method 工厂方法模式
+
+    目的：定义一个创建对象的接口，让子类决定实例化哪个类。
+
+    示例：ConcreteCreatorA、ConcreteCreatorB 创建各自产品。
+
+🟩 Abstract Factory 抽象工厂模式
+
+    目的：提供一组相关产品的创建接口，而无需指定其具体类。
+
+    示例：ChinaFruitFactory、USFruitFactory 创建中美风味水果。
+
+🟩 Builder 建造者模式
+
+    目的：将一个复杂对象的构建与其表示分离，使同样的构建过程可以创建不同的表示。
+
+    示例：ConcreteUserProfileBuilder 构建用户简介对象。
+
+🟩 Prototype 原型模式
+
+    目的：通过复制已有实例来创建新对象，而不是通过 new。
+
+    示例：Field.clone() 复制一个表单字段配置对象。
+
+🟦 Adapter 适配器模式（结构型）
+
+    目的：将一个类的接口转换为客户端期望的另一个接口，实现兼容。
+
+    示例：OldCharger 使用 ChargerAdapter 适配为 Charger 接口。
