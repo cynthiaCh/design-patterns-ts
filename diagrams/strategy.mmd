@@ -1,0 +1,18 @@
+classDiagram
+  class PricingStrategy {
+    <<interface>>
+    +calculate(basePrice)
+  }
+
+  class NormalStrategy
+  class VipStrategy
+  class SuperVipStrategy
+  class OrderContext {
+    -strategy: PricingStrategy
+    +calculateTotal(basePrice)
+  }
+
+  PricingStrategy <|.. NormalStrategy
+  PricingStrategy <|.. VipStrategy
+  PricingStrategy <|.. SuperVipStrategy
+  OrderContext --> PricingStrategy
