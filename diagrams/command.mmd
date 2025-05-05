@@ -1,0 +1,35 @@
+classDiagram
+
+class Command {
+  <<interface>>
+  +execute()
+  +undo()
+}
+
+class Light {
+  +on()
+  +off()
+}
+
+class LightOnCommand {
+  +execute()
+  +undo()
+}
+
+class LightOffCommand {
+  +execute()
+  +undo()
+}
+
+class RemoteControl {
+  -command: Command
+  +setCommand(command)
+  +pressButton()
+  +pressUndo()
+}
+
+Command <|.. LightOnCommand
+Command <|.. LightOffCommand
+LightOnCommand --> Light : uses
+LightOffCommand --> Light : uses
+RemoteControl --> Command : has a
