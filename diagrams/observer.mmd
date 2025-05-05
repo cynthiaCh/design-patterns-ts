@@ -1,0 +1,19 @@
+classDiagram
+  class Subject {
+    -observers: Observer[]
+    +attach(observer)
+    +detach(observer)
+    +notify(data)
+  }
+
+  class Observer {
+    <<interface>>
+    +update(data)
+  }
+
+  class LoggerObserver
+  class AlertObserver
+
+  Observer <|.. LoggerObserver
+  Observer <|.. AlertObserver
+  Subject --> Observer : notifies
