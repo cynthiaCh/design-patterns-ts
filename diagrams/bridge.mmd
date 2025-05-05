@@ -1,0 +1,36 @@
+classDiagram
+
+class TV {
+  <<interface>>
+  +on()
+  +off()
+  +tuneChannel(channel)
+}
+
+class SonyTV {
+  +on()
+  +off()
+  +tuneChannel(channel)
+}
+
+class XiaomiTV {
+  +on()
+  +off()
+  +tuneChannel(channel)
+}
+
+class RemoteControl {
+  -tv: TV
+  +turnOn()
+  +turnOff()
+  +setChannel(channel)
+}
+
+class AdvancedRemoteControl {
+  +mute()
+}
+
+TV <|.. SonyTV
+TV <|.. XiaomiTV
+RemoteControl --> TV
+AdvancedRemoteControl --|> RemoteControl

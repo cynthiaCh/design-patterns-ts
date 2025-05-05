@@ -71,7 +71,7 @@ design-patterns-ts/
 - [✅] 外观模式（Facade）
 - [✅] 组合模式（Composite）
 - [✅] 代理模式（Proxy）
-- [ ] 桥接模式（Bridge）
+- [✅] 桥接模式（Bridge）
 - [ ] 享元模式（Flyweight）
 
 ### 🔄 行为型模式（Behavioral Patterns）
@@ -162,3 +162,7 @@ design-patterns-ts/
 - Subject（抽象主题接口）
 - RealSubject（真实主题对象）
 - Proxy（代理类）
+
+🟦 桥接模式 = 抽象接口 + 实现接口 的解耦组合。
+
+这非常适合当你有多个维度变化（如平台、品牌、类型）时，将它们用组合（而不是继承）方式连接起来。
