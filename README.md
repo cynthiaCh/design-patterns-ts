@@ -77,7 +77,7 @@ design-patterns-ts/
 
 - [✅] 策略模式（Strategy）
 - [✅] 观察者模式（Observer）
-- [ ] 状态模式（State）
+- [✅] 状态模式（State）
 - [ ] 命令模式（Command）
 - [ ] 责任链模式（Chain of Responsibility）
 - [ ] 模板方法模式（Template Method）
@@ -177,3 +177,7 @@ design-patterns-ts/
 🟦 观察者模式（Observer Pattern）是一种经典的行为型设计模式，其核心目的是：
 
     当一个对象状态发生变化时，自动通知并更新所有依赖它的对象，实现“一对多”的低耦合通知机制。
+    
+🟦 状态模式（State Pattern）是行为型设计模式之一，它的核心目的是：
+
+    当一个对象的内部状态发生变化时，允许其改变行为逻辑，就好像它变成了另一个对象一样。

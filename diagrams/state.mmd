@@ -1,0 +1,25 @@
+classDiagram
+  class OrderState {
+    <<interface>>
+    +next(order)
+    +cancel(order)
+    +status()
+  }
+
+  class PendingState
+  class PaidState
+  class ShippedState
+  class CancelledState
+  class OrderContext {
+    -state: OrderState
+    +setState()
+    +next()
+    +cancel()
+    +getStatus()
+  }
+
+  OrderState <|.. PendingState
+  OrderState <|.. PaidState
+  OrderState <|.. ShippedState
+  OrderState <|.. CancelledState
+  OrderContext --> OrderState
