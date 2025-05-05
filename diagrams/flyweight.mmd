@@ -1,0 +1,18 @@
+classDiagram
+
+class Shape {
+  <<interface>>
+  +draw(x, y)
+}
+
+class Circle {
+  -color
+  +draw(x, y)
+}
+
+class ShapeFactory {
+  +getCircle(color)
+}
+
+Shape <|.. Circle
+ShapeFactory --> Circle : 缓存/复用
