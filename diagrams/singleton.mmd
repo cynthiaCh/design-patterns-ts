@@ -1,0 +1,12 @@
+classDiagram
+    class Client {
+        +getInstance()
+    }
+    class Singleton {
+        -instance: Singleton
+        -constructor()
+        +getInstance()
+        +someMethod()
+    }
+
+    Client --> Singleton : Singleton.getInstance()

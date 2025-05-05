@@ -21,6 +21,8 @@ import { Phone } from './structural/facade/Phone.js';
 import { File } from './structural/composite/File.js';
 import { Folder } from './structural/composite/Folder.js';
 
+import { ProxyImage } from './structural/proxy/ProxyImage.js';
+
 console.log('=== Singleton 测试 ===');
 const a = Singleton.getInstance();
 const b = Singleton.getInstance();
@@ -87,3 +89,7 @@ root.add(src);
 root.add(file3);
 root.show();
 
+console.log('\n=== Proxy 代理模式测试 ===');
+const proxyImg = new ProxyImage('design-patterns.jpg');
+proxyImg.display();
+proxyImg.display();

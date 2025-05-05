@@ -1,0 +1,15 @@
+classDiagram
+    class Client {
+        +display()
+    }
+    class ProxyImage {
+        -realImage: RealImage
+        +display()
+    }
+    class RealImage {
+        +display()
+        -loadFromDisk()
+    }
+
+    Client --> ProxyImage : 调用 display()
+    ProxyImage --> RealImage : 延迟创建、转发 display()

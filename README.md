@@ -69,8 +69,8 @@ design-patterns-ts/
 - [✅] 适配器模式（Adapter）
 - [✅] 装饰器模式（Decorator）
 - [✅] 外观模式（Facade）
-- [ ] 组合模式（Composite）
-- [ ] 代理模式（Proxy）
+- [✅] 组合模式（Composite）
+- [✅] 代理模式（Proxy）
 - [ ] 桥接模式（Bridge）
 - [ ] 享元模式（Flyweight）
 
@@ -152,3 +152,13 @@ design-patterns-ts/
 - **目的**：统一处理单个对象和组合对象，使它们拥有一致的接口。
 - **使用场景**：树形结构（如文件系统、组织架构、GUI 组件树）
 - **示例**：`Folder` 和 `File` 都实现了 `Component` 接口，支持递归展示结构。
+
+
+🟦 代理模式
+
+为某对象提供一个替代对象或占位符，以控制对这个对象的访问。
+
+结构图角色：
+- Subject（抽象主题接口）
+- RealSubject（真实主题对象）
+- Proxy（代理类）
