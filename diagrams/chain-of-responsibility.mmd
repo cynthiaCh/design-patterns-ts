@@ -1,0 +1,23 @@
+classDiagram
+    class Handler {
+        <<abstract>>
+        - nextHandler: Handler
+        + setNext(handler: Handler): Handler
+        + handle(request: string): void
+    }
+
+    class AuthHandler {
+        + handle(request: string): void
+    }
+
+    class LoggingHandler {
+        + handle(request: string): void
+    }
+
+    class ErrorHandler {
+        + handle(request: string): void
+    }
+
+    Handler <|-- AuthHandler
+    Handler <|-- LoggingHandler
+    Handler <|-- ErrorHandler
