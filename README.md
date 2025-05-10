@@ -83,7 +83,7 @@ design-patterns-ts/
 - [✅] 状态模式（State）
 - [✅] 命令模式（Command）
 - [✅] 责任链模式（Chain of Responsibility）
-- [ ] 模板方法模式（Template Method）
+- [✅] 模板方法模式（Template Method）
 - [ ] 迭代器模式（Iterator）
 - [ ] 中介者模式（Mediator）
 - [ ] 访问者模式（Visitor）
@@ -207,3 +207,5 @@ design-patterns-ts/
     可能导致请求无处理者响应
     调试不方便，尤其是链条较长时难以追踪
     本模式非常适用于权限校验、请求预处理、过滤器链等场景。
+
+🟦 模板方法模式是一种行为型设计模式，它在父类中定义算法骨架，并将部分步骤延迟到子类中实现，使得子类可以在不改变整体结构的情况下，重新定义某些步骤。

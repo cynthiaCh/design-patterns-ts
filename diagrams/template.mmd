@@ -1,0 +1,22 @@
+classDiagram
+
+class AbstractProcess {
+  +run()
+  +step1()
+  +step2()
+  +step3()
+}
+
+class ConcreteProcessA {
+  +step2()
+}
+
+class ConcreteProcessB {
+  +step2()
+}
+
+AbstractProcess <|-- ConcreteProcessA
+AbstractProcess <|-- ConcreteProcessB
+ConcreteProcessA : override step2()
+ConcreteProcessB : override step2()
+AbstractProcess : run() defines the template
