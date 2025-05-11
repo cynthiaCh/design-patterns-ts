@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant Client
+    participant ConcreteElementA
+    participant Visitor1
+
+    Client->>ConcreteElementA: accept(visitor1)
+    ConcreteElementA->>Visitor1: visitElementA(this)
+    Visitor1-->>ConcreteElementA: 读取 operationA()
+    Visitor1-->>Client: 输出处理结果
+    participant ConcreteElementB
+
+    Client->>ConcreteElementB: accept(visitor1)
+    ConcreteElementB->>Visitor1: visitElementB(this)
+    Visitor1-->>ConcreteElementB: 读取 operationB()
+    Visitor1-->>Client: 输出处理结果

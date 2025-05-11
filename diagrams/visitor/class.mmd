@@ -1,0 +1,47 @@
+classDiagram
+
+%% 接口
+class Element {
+  <<interface>>
+  +accept(visitor: Visitor): void
+}
+
+class Visitor {
+  <<interface>>
+  +visitElementA(a: ConcreteElementA): void
+  +visitElementB(b: ConcreteElementB): void
+}
+
+%% 具体元素类
+class ConcreteElementA {
+  +accept(visitor: Visitor): void
+  +operationA(): string
+}
+
+class ConcreteElementB {
+  +accept(visitor: Visitor): void
+  +operationB(): string
+}
+
+%% 具体访问者类
+class Visitor1 {
+  +visitElementA(a: ConcreteElementA): void
+  +visitElementB(b: ConcreteElementB): void
+}
+
+class Visitor2 {
+  +visitElementA(a: ConcreteElementA): void
+  +visitElementB(b: ConcreteElementB): void
+}
+
+%% 关系
+Element <|.. ConcreteElementA
+Element <|.. ConcreteElementB
+Visitor <|.. Visitor1
+Visitor <|.. Visitor2
+ConcreteElementA --> Visitor : accept()
+ConcreteElementB --> Visitor : accept()
+Visitor1 --> ConcreteElementA : visitElementA()
+Visitor1 --> ConcreteElementB : visitElementB()
+Visitor2 --> ConcreteElementA : visitElementA()
+Visitor2 --> ConcreteElementB : visitElementB()
