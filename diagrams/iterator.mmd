@@ -1,0 +1,28 @@
+classDiagram
+
+class Iterator~T~ {
+  <<interface>>
+  +hasNext(): boolean
+  +next(): T
+}
+
+class Aggregate~T~ {
+  <<interface>>
+  +getIterator(): Iterator~T~
+}
+
+class NameIterator {
+  -names: string[]
+  -index: number
+  +hasNext(): boolean
+  +next(): string
+}
+
+class NameRepository {
+  -names: string[]
+  +getIterator(): Iterator~string~
+}
+
+Iterator~T~ <|.. NameIterator
+Aggregate~T~ <|.. NameRepository
+NameRepository --> NameIterator : returns
