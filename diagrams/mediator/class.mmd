@@ -1,0 +1,40 @@
+classDiagram
+
+%% === 接口 & 抽象类 ===
+class Mediator {
+  <<interface>>
+  +notify(sender: Component, event: string): void
+}
+
+class Component {
+  -mediator: Mediator
+  +setMediator(mediator: Mediator): void
+}
+
+%% === 具体中介者 ===
+class DialogMediator {
+  -button: Button
+  -textBox: TextBox
+  +notify(sender: Component, event: string): void
+}
+
+%% === 具体组件 ===
+class Button {
+  +click(): void
+}
+
+class TextBox {
+  -value: string
+  +clear(): void
+  +setValue(value: string): void
+  +getValue(): string
+}
+
+%% === 关系 ===
+Mediator <|.. DialogMediator
+Component <|-- Button
+Component <|-- TextBox
+DialogMediator --> Button : manages
+DialogMediator --> TextBox : manages
+Button --> Mediator : uses
+TextBox --> Mediator : uses

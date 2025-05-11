@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant Client
+    participant Button
+    participant DialogMediator
+    participant TextBox
+
+    Client->>Button: click()
+    Button->>DialogMediator: notify(this, "click")
+    DialogMediator->>TextBox: clear()
+    TextBox-->>DialogMediator: 清空内容（value = ""）
