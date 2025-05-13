@@ -1,0 +1,33 @@
+classDiagram
+  class Expression {
+    +interpret(context: Map<string, number>): number
+  }
+
+  class Variable {
+    -name: string
+    +interpret(context: Map<string, number>): number
+  }
+
+  class Add {
+    -left: Expression
+    -right: Expression
+    +interpret(context: Map<string, number>): number
+  }
+
+  class Subtract {
+    -left: Expression
+    -right: Expression
+    +interpret(context: Map<string, number>): number
+  }
+
+  class Context {
+    -variables: Map<string, number>
+    +setVariable(name: string, value: number): void
+    +getVariable(name: string): number
+    +getContext(): Map<string, number>
+  }
+
+  %% 继承关系
+  Variable --> Expression
+  Add --> Expression
+  Subtract --> Expression

@@ -87,7 +87,7 @@ design-patterns-ts/
 - [✅] 迭代器模式（Iterator）
 - [✅] 中介者模式（Mediator）
 - [✅] 访问者模式（Visitor）
-- [ ] 解释器模式（Interpreter）
+- [✅] 解释器模式（Interpreter）
 - [ ] 备忘录模式（Memento）
 
 📌 每个模式包含以下内容：
@@ -219,4 +219,9 @@ design-patterns-ts/
 - 表单项或组件层级结构访问（每种组件逻辑不同）
 - UI 渲染与导出 PDF/图片等多种格式
 
-
+🟦 解释器模式（Interpreter Pattern），用于为语言创建解释器，或者说，它定义了一个语言的文法，并且建立一个解释器来解释这个语言中的句子。
+解释器模式的核心类图和组成部分包括：
+抽象表达式（AbstractExpression）：定义解释操作的接口。
+终结符表达式（TerminalExpression）：实现与文法中的终结符相关的解释操作。
+非终结符表达式（NonTerminalExpression）：实现文法中的非终结符规则。
+上下文（Context）：包含解释器之外的一些全局信息。
