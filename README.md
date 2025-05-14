@@ -88,7 +88,7 @@ design-patterns-ts/
 - [✅] 中介者模式（Mediator）
 - [✅] 访问者模式（Visitor）
 - [✅] 解释器模式（Interpreter）
-- [ ] 备忘录模式（Memento）
+- [✅] 备忘录模式（Memento）
 
 📌 每个模式包含以下内容：
 
@@ -225,3 +225,7 @@ design-patterns-ts/
 终结符表达式（TerminalExpression）：实现与文法中的终结符相关的解释操作。
 非终结符表达式（NonTerminalExpression）：实现文法中的非终结符规则。
 上下文（Context）：包含解释器之外的一些全局信息。
+
+🧠 备忘录模式（Memento Pattern）简介
+意图：在不破坏封装的前提下，捕获一个对象的内部状态，并在以后将其恢复（比如“撤销/恢复”功能）。
+

@@ -1,0 +1,22 @@
+classDiagram
+  class Originator {
+    -state: string
+    +setState(state: string): void
+    +getState(): string
+    +save(): Memento
+    +restore(memento: Memento): void
+  }
+
+  class Memento {
+    -state: string
+    +getState(): string
+  }
+
+  class Caretaker {
+    -mementos: Memento[]
+    +addMemento(m: Memento): void
+    +getMemento(index: number): Memento
+  }
+
+  Originator --> Memento : 创建/恢复
+  Caretaker --> Memento : 保存/获取
